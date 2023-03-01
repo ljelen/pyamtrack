@@ -13,10 +13,6 @@ except ImportError:
 
 version = versioneer.get_version()
 parsed_version = parse_version(version)
-if '*@' in parsed_version[1]:
-    import time
-    version += str(int(time.time()))
-
 
 with open('README.rst') as readme_file:
     readme = readme_file.read()
